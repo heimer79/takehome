@@ -39,5 +39,8 @@ node_modules/
 
 
 
-
+# workspace include
 ideaware.code-workspace
+
+# wp config local
+stack/local.php
