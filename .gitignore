@@ -26,10 +26,10 @@ node_modules/
 *.tar
 *.zip
 *.jpeg
-*.jpg
+#*.jpg
 *.pdf
-*.png
-*.svg
+#*.png
+#*.svg
 *.mp3
 *.mp4
 *.webp

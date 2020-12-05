@@ -1,4 +1,4 @@
-console.log('hola WP');
+/* console.log('hola WP');
 
 
 ( function( $ ) {
@@ -6,3 +6,5 @@ console.log('hola WP');
 alert($.fn.jquery);
 // Plugin/theme code should go here.
 }( jQuery3_2_1 ) );
+
+*/
