@@ -1,0 +1,18 @@
+
+
+# ignore node dependency directories
+node_modules/
+
+# ignore binary files and databases
+*.log
+*.sql
+*.sqlite
+*.svg
+*.jpeg
+*.png
+*.jpg
+*.gif
+*.webp
+ideaware.code-workspace
+assets/.DS_Store
+.DS_Store
