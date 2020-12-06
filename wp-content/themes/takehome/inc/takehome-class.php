@@ -38,7 +38,8 @@ if ( ! class_exists( 'Takehome' ) ) :
 			add_theme_support( 'title-tag' );
 			register_nav_menus(
 				array(
-					'top_menu' => 'Menú Principal',
+					'top_menu'    => 'Menú Principal',
+					'mobile_menu' => 'Menú móvil',
 
 				)
 			);
@@ -56,7 +57,9 @@ if ( ! class_exists( 'Takehome' ) ) :
 			// Adding standard styles on WordPress
 			wp_register_style( 'standard', get_template_directory_uri() . '/assets/css/standard.css', '', '1.0.0', 'all' );
 
-			wp_enqueue_style( 'estilos', get_stylesheet_uri(), array( 'reset', 'fuente', 'global', 'standard' ), '1.0.0', 'all' );
+			wp_register_style( 'medios', get_template_directory_uri() . '/assets/css/medios.css', '', '1.0.0', 'all' );
+
+			wp_enqueue_style( 'estilos', get_stylesheet_uri(), array( 'reset', 'fuente', 'global', 'standard', 'medios' ), '1.0.0', 'all' );
 
 			wp_register_script( 'jquery3.2.1', 'https://code.jquery.com/jquery-3.2.1.min.js' );
 

@@ -9,27 +9,50 @@
 
 <body>
 
-<header>
-	<div >
-		<div >
-			<div >
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="logo">
-			</div>
-			<div >
-				<nav>
-				   <?php
-					wp_nav_menu(
-						array(
-							'theme_location'  => 'top_menu',
-							'menu_class'      => 'main-navigation',
-							'container_class' => 'container-menu',
+<header class="site-header">
+	
+	<section id="logo-nav">	
+		<div>
 
-						)
-					);
-					?>
-				</nav>
-			</div>
-		
+			<figure>			
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="logo">
+			</figure>
 		</div>
-	</div>
+		<div >
+			<nav id="desktop-menu">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'top_menu',
+						'menu_class'      => 'main-navigation',
+						'container_class' => 'container-menu',
+
+					)
+				);
+				?>
+			</nav>
+			
+			<nav id="mobile-menu">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'mobile_menu',
+						'menu_class'      => 'menu-toggle',
+						'container_class' => 'main-small-navigation',
+
+					)
+				);
+				?>
+			</nav>
+		</div>
+	</section>
+	
+	<section>
+		
+	</section>
+		
+		
+	
 </header>
+
+

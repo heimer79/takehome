@@ -1,0 +1,21 @@
+@media (max-width: 1024px) {
+ #desktop-menu {
+  display: none;
+ }
+
+ #mobile-menu {
+  display: block;
+ }
+
+ header.site-header {
+
+  background-position: center;
+
+ }
+
+ .site-header #logo-nav {
+
+  flex-flow: row-reverse nowrap;
+
+ }
+}
