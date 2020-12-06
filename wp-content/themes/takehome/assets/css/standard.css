@@ -44,12 +44,12 @@
  display: none;
 }
 
-#menu-main-menu {
+.main-navigation {
     display: inline-flex;
     list-style: none;
 }
 
-#menu-main-menu li {
+.main-navigation li {
  float: left;
  position: relative;
  margin: 0 4rem 0 4rem;
@@ -57,7 +57,7 @@
 
 }
 
-#menu-main-menu  a {
+.main-navigation  a {
  display: block;
  text-decoration: none;
  color:var(--white);
@@ -84,6 +84,12 @@
 /* ============================================== ========================== 
    Content
    ===================== ================================================ === */
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+    width: -webkit-fill-available;
+}
 
 .box {
     width: 100%;
@@ -124,6 +130,21 @@
 .page-links {
  clear: both;
  margin: 0 0 1.5em;
+}
+
+
+.center-text {
+    width: 50vw;
+    text-align: center;
+}
+
+.center-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-content: center;
+    position: relative;
+    margin: 0 auto;
 }
 
 /* Asides
@@ -310,7 +331,8 @@ object {
 
 #get-ahead-section {
     display: flex;
-    
+    position: relative;
+    margin: 0 auto;
 }
 
 #get-ahead {
@@ -333,28 +355,41 @@ object {
     margin-right: auto;
 }
 
-#based-data {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+#based-data {    
+    flex-flow: row wrap; 
+    height: 25vh;   
+}
+
+#based-data h3 {
     width: 100%;
-    height: 25vh;
-    align-content: center;
+    line-height: 2.5em;
 }
 
 .card {
     width: 243px;
-    height: 130px;
-    border: 1px solid #C6C9D2;
+    height: 120px;
+    border: 1px solid var(--greytext2);
     border-radius: 6px;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
+    border-bottom: 8px solid;
+    margin-right: 5%;
 }
 
 .card .icon {
     font-size: 2em;
+    display: block;
+    width: 50%;
+    text-align: center;
+}
+
+.card div {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: end;
+    width: 50%;
 }
 
 #based-data div:nth-child(-n+2) {
@@ -363,4 +398,90 @@ object {
 
 #based-data div:nth-last-child(-n+2) {
     color: var(--seablue);
+}
+
+.card div h3, .card div small {
+    color: var(--blacktext);
+    text-align: center;
+}
+.card div h3{
+   font-size: 3rem;
+}
+
+.card div small{
+   font-size: 1.5rem;
+   text-transform: uppercase;
+}
+
+
+#see-where {    
+    height: 50vh;   
+    flex-flow: column wrap;
+    text-align: center;
+    background: var(--greyinset);
+}
+
+
+#see-where .input-container {
+    display: -ms-flexbox;
+    display: flex;
+    width: 30vw;
+    margin-bottom: 15px;
+    align-self: center;
+}
+
+#see-where label {
+    width: 30vw;
+    text-align: left;
+    align-self: center;
+}
+
+#see-where .icon {
+    padding: 10px;
+    background: var(--white);
+    color: var(--blacktext);
+    min-width: 30px;
+    text-align: center;
+    border: 1px solid var(--greyborder1);
+}
+
+#see-where .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid var(--greyborder1);
+}
+
+
+#research-post {
+    flex-flow: column wrap;
+    padding: 8rem 0 8rem 0;
+    height: auto;
+}
+
+#research-post article {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    box-shadow: 0px 4px 30px var(--greyborder2);
+    margin: 2rem 0 2rem 0;
+}
+
+#research-post *{
+   position: relative;
+   display: inline-block;
+}
+
+#research-post article figure {
+    width: 30%;    
+}
+
+#research-post article div {
+    width: 70%; 
+    display: flex;
+    flex-flow: column nowrap;    
+}
+
+#research-post article div h2 {
+    width: 60%;    
 }

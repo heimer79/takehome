@@ -7,6 +7,10 @@
   .site-header #logo-nav {
     justify-content: normal;
   }
+
+  .card {
+    margin-right: 2%;
+}
   
 }
 
