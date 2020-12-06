@@ -52,6 +52,7 @@ if ( ! class_exists( 'Takehome' ) ) :
 			wp_register_style( 'reset', get_template_directory_uri() . '/assets/css/reset.css', '', '1.0.0', 'all' );
 			// Adding custom font Avenir LT Std
 			wp_register_style( 'fuente', get_template_directory_uri() . '/assets/css/fuente.css', '', '1.0.0', 'all' );
+			wp_register_style( 'icons', get_template_directory_uri() . '/assets/css/icon.css', '', '1.0.0', 'all' );
 			// Adding global styles
 			wp_register_style( 'global', get_template_directory_uri() . '/assets/css/global.css', '', '1.0.0', 'all' );
 			// Adding standard styles on WordPress
@@ -59,7 +60,7 @@ if ( ! class_exists( 'Takehome' ) ) :
 
 			wp_register_style( 'medios', get_template_directory_uri() . '/assets/css/medios.css', '', '1.0.0', 'all' );
 
-			wp_enqueue_style( 'estilos', get_stylesheet_uri(), array( 'reset', 'fuente', 'global', 'standard', 'medios' ), '1.0.0', 'all' );
+			wp_enqueue_style( 'estilos', get_stylesheet_uri(), array( 'reset', 'fuente', 'icons', 'global', 'standard', 'medios' ), '1.0.0', 'all' );
 
 			wp_register_script( 'jquery3.2.1', 'https://code.jquery.com/jquery-3.2.1.min.js' );
 

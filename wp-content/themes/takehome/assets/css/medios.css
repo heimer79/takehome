@@ -1,3 +1,17 @@
+
+@media all and (max-width: 1366px) and (min-width: 1025px) {
+  .box {
+      left: 5%;
+      right: 5%;
+  }
+  .site-header #logo-nav {
+    justify-content: normal;
+  }
+  
+}
+
+
+
 @media (max-width: 1024px) {
  #desktop-menu {
   display: none;
@@ -7,9 +21,10 @@
   display: block;
  }
 
- header.site-header {
+ .site-header {
 
   background-position: center;
+  height: auto;
 
  }
 

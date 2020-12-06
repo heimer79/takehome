@@ -1,12 +1,44 @@
+/* ============================================== ========================== 
+   Colors
+   ===================== ================================================ === */
+  
+  
+:root {
+   --purple1: #6161E8;
+   --purple2: #9090E7;    
+   --seablue: #B1EFEA;
+   --blacktext: #324063;
+   --greytext: #82858E;
+   --greyborder1: #ccc;
+   --greyborder2: #bbb;
+   --greyborder3: #aaa;
+   --greyborder4: #eee;
+   --greyshadow:rgba(0, 0, 0, 0.15);
+   --greyinset:rgba(0, 0, 0, 0.02);
+   --white: #FFFFFF;
+   --whiteshadow:rgba(255,255,255,0.8);
+   
+}
+
+
+
+
 /* =Global
 ----------------------------------------------- */
+
+body {
+    background: var(--white);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
 
 body,
 button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: var(--greytext);
   font-family: "Avenir LT Std", "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -47,7 +79,7 @@ h6 {
 }
 
 hr {
-  background-color: #ccc;
+  background-color:var(--greyborder1);
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
@@ -97,8 +129,8 @@ address {
   margin: 0 0 1.5em;
 }
 pre {
-  background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
+  background: var(--greyborder4);
+  font-family:  Courier, monospace;
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 1.6;
@@ -111,16 +143,16 @@ code,
 kbd,
 tt,
 var {
-  font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font: 15px Monaco, Consolas, monospace;
 }
 abbr,
 acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: 1px dotted var(--greytext);
   cursor: help;
 }
 mark,
 ins {
-  background: #fff9c0;
+  background: var(--seablue);
   text-decoration: none;
 }
 sup,
@@ -171,42 +203,32 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid #ccc;
-  border-color: #ccc #ccc #bbb #ccc;
+  border: 1px solid var(--purple1);
+  border-color:var(--purple1);
   border-radius: 3px;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 15px 17px rgba(255, 255, 255, 0.5),
-    inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 15px 17px rgba(255, 255, 255, 0.5),
-    inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 15px 17px rgba(255, 255, 255, 0.5),
-    inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
+  background:var(--purple1);
+  color: var(--white);
   cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
   -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
   font-size: 12px;
   font-size: 1.4rem;
   line-height: 1;
   padding: 1.12em 1.5em 1em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 button:hover,
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #ccc #bbb #aaa #bbb;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    inset 0 15px 17px rgba(255, 255, 255, 0.8),
-    inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    inset 0 15px 17px rgba(255, 255, 255, 0.8),
-    inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    inset 0 15px 17px rgba(255, 255, 255, 0.8),
-    inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+  border-color: var(--greyborder1) var(--greyborder2) var(--greyborder3) var(--greyborder2);
+  -webkit-box-shadow: inset 0 1px 0 var(--whiteshadow),
+    inset 0 15px 17px var(--whiteshadow),
+    inset 0 -5px 12px var(--greyinset);
+  -moz-box-shadow: inset 0 1px 0 var(--whiteshadow),
+    inset 0 15px 17px var(--whiteshadow),
+    inset 0 -5px 12px var(--greyinset);
+  box-shadow: inset 0 1px 0 var(--whiteshadow),
+    inset 0 15px 17px var(--whiteshadow),
+    inset 0 -5px 12px var(--greyinset);
 }
 button:focus,
 html input[type="button"]:focus,
@@ -216,13 +238,13 @@ button:active,
 html input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  border-color: #aaa #bbb #bbb #bbb;
-  -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 2px 5px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 2px 5px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 2px 5px rgba(0, 0, 0, 0.15);
+  border-color:var(--blacktext) var(--greytext) var(--greytext) var(--greytext);
+  -webkit-box-shadow: inset 0 -1px 0 var(--greyshadow),
+    inset 0 2px 5px var(--greyshadow);
+  -moz-box-shadow: inset 0 -1px 0 var(--greyshadow),
+    inset 0 2px 5px var(--greyshadow);
+  box-shadow: inset 0 -1px 0 var(--greyshadow),
+    inset 0 2px 5px var(--greyshadow);
 }
 input[type="checkbox"],
 input[type="radio"] {
@@ -248,14 +270,14 @@ input::-moz-focus-inner {
 input[type="text"],
 input[type="email"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
+  color:var(--greytext);
+  border: 1px solid var(--white);
   border-radius: 3px;
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  color: #111;
+  color:var(--blacktext);
 }
 input[type="text"],
 input[type="email"] {
@@ -270,13 +292,18 @@ textarea {
 
 /* Links */
 a {
-  color: royalblue;
+  color: var(--purple1);
 }
 a:visited {
-  color: purple;
+  color: var(--purple2);
 }
 a:hover,
 a:focus,
 a:active {
-  color: midnightblue;
+  color: var(--seablue);
 }
+
+
+
+
+
