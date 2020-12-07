@@ -11,6 +11,7 @@
  */
 //Clases
 require 'inc/takehome-class.php';
+require 'inc/ThemeSettingsIdeaware.php';
 
 //Global theme functions
 require 'inc/takehome-functions.php';

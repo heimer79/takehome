@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php get_header();
+  require 'inc/vars_settings.php'
+?>
+
 <main>
 
 	<section id="get-ahead-section" >
@@ -9,24 +12,24 @@
 
 		<div id="get-ahead-text">
 
-			<h2>Get ahead of the curve</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper, leo dapibus dictum tempor, urna arcu blandit risus, faucibus ornare sapien nulla sit amet est. Proin maximus rhoncus pretium. Sed a blandit est. Proin volutpat tempus dolor eget hendrerit. Vestibulum blandit neque a luctus ultrices. Aliquam id rhoncus libero, eget lobortis quam.</p>
+			<h2><?php print $title_second_section_3; ?></h2>
+			<p><?php print $description_second_section_4; ?></p>
 		
 		</div>
 	</section>
 
 	<section id="based-data" class="box center-box" >
-		<h3 class="box">Based on data from:</h3>
-		<div class="card flex-flow-row"><span class="icon icon-ticket"></span><div><h3>200</h3><small>tickets</small></div></div>
-		<div class="card flex-flow-row"><span class="icon icon-users"></span><div><h3>320M</h3><small>customers</small></div></div>
-		<div class="card flex-flow-row"><span class="icon icon-accessibility"></span><div><h3>320M</h3><small>agents</small></div></div>
-		<div class="card flex-flow-row"><span class="icon icon-wrench"></span><div><h3>320</h3><small>customers</small></div></div>
+		<h3 class="box"><?php print $title_third_section_5; ?></h3>
+		<div class="card flex-flow-row"><span class="icon icon-ticket"></span><div><h3><?php print $title_first_card_6; ?></h3><small><?php print $subtitle_first_card_7; ?></small></div></div>
+		<div class="card flex-flow-row"><span class="icon icon-users"></span><div><h3><?php print $title_second_card_8; ?></h3><small><?php print $subtitle_second_card_9; ?></small></div></div>
+		<div class="card flex-flow-row"><span class="icon icon-accessibility"></span><div><h3><?php print $title_third_card_10; ?></h3><small><?php print $subtitle_third_card_11; ?></small></div></div>
+		<div class="card flex-flow-row"><span class="icon icon-wrench"></span><div><h3><?php print $title_fourth_card_12; ?></h3><small><?php print $subtitle_fourth_card_13; ?></small></div></div>
 	</section>
 
 
-	<section id="see-where" class="center-box flex-flow-row">
-		<h2 class="center-text">See where you stand</h2>
-		<p class="center-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper, leo dapibus dictum tempor, urna arcu blandit risus,</p>
+	<section id="see-where" class="center-box flex-flow-column">
+		<h2 class="center-text"><?php print $title_fourth_section_14; ?></h2>
+		<p class="center-text"><?php print $description_fourth_section_15; ?></p>
 	<label for="industry">Industry</label>
 	<div class="input-container">
 			<i class="icon icon-home"> </i> 
@@ -42,44 +45,63 @@
 	</section>
 	<section id="research-post" class="center-box">
 
-	<h2 class="center-text">Learn from our research</h2>
-		<p class="center-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper, leo dapibus dictum tempor, urna arcu blandit risus,</p>
+	<h2 class="center-text"><?php print $title_fifth_section_16; ?></h2>
+		<p class="center-text"><?php print $description_fifth_section_17; ?></p>
 
-		<article class="box-shadow-section flex-flow-row">
-			<figure><img src="wp-content/themes/takehome/assets/img/Group-1.svg" alt=""></figure>
-			<div>
-				<h2>Research Investigation regarding COVID-19 vaccine and the way it impacts LATAM.</h2>
-				<p><a href="">Read report</a></p>
-			</div>
-		</article >
-		<article class="box-shadow-section flex-flow-row" >
-			<figure><img src="wp-content/themes/takehome/assets/img/Group-1.svg" alt=""></figure>
-			<div>
-				<h2>Research Investigation regarding COVID-19 vaccine and the way it impacts LATAM.</h2>
-				<p><a href="">Read report</a></p>
-			</div>
-		</article >
-		<article class="box-shadow-section flex-flow-row" >
-			<figure><img src="wp-content/themes/takehome/assets/img/Group-1.svg" alt=""></figure>
-			<div>
-				<h2>Research Investigation regarding COVID-19 vaccine and the way it impacts LATAM.</h2>
-				<p><a href="">Read report</a></p>
-			</div>
-		</article >
-		<article class="box-shadow-section flex-flow-row">
-			<figure><img src="wp-content/themes/takehome/assets/img/Group-1.svg" alt=""></figure>
-			<div>
-				<h2>Research Investigation regarding COVID-19 vaccine and the way it impacts LATAM.</h2>
-				<p><a href="">Read report</a></p>
-			</div>
-		</article>
+	<?php
+				$args = array(
+					'post_type'     => 'research',
+					'post_per_page' => 4,
+					'order'         => 'DESC',
+					'orderby'       => 'title',
+				);
+
+								$research = new WP_Query( $args );
+
+				if ( $research->have_posts() ) {
+					while ( $research->have_posts() ) {
+						$research->the_post();
+						?>
+
+
+							<article class="box-shadow-section flex-flow-row">
+								
+								<figure>
+
+									<?php
+									if ( has_post_thumbnail() ) {
+													the_post_thumbnail( 'thumbnail' );
+									} else {
+											echo '<img src="' . get_bloginfo( 'template_url' ) . '/assets/img/Group-1.svg" />';
+									}
+
+									?>
+									
+								</figure>
+								<div>
+									<h2><?php the_title(); ?></h2>
+									<p><a href="<?php the_permalink(); ?>">Read report</a></p>
+								</div>
+								
+						</article>
+
+
+
+						<?php
+					}
+				}
+
+
+				?>
+
+	
 	</section>
 
 	<section id="see-where-you-stand" class="center-box flex-flow-column">
 
-		<h2 class="center-text">See where you stand</h2>
-			<p class="center-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper, leo dapibus dictum tempor, urna arcu blandit risus,</p>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/Vhe8umarsQk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<h2 class="center-text"><?php print $title_sixth_section_18; ?> </h2>
+			<p class="center-text"><?php print $description_sixth_section_19; ?></p>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/<?php print $id_you_tube_video_24; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 	</section>
 
@@ -89,7 +111,7 @@
 				height="450"
 				frameborder="0" style="border:0"
 				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBs-ONSe2mvpxykqBE5yTyVYIgvffAfPlg
-					&q=Labs&center=3.400888,-76.531502&zoom=10" allowfullscreen>
+					&q=<?php print $defines_the_place_to_highlight_on_the_map_23; ?>&center=<?php print $latitude_map_20; ?>,<?php print $longitude_map_21; ?>&zoom=<?php print $zoom_map_22; ?>" allowfullscreen>
 		</iframe>
 		<div id="address" class="box-shadow-section">
 			<div id="logo">
@@ -117,7 +139,7 @@
 
 						 <div>
 
-						 	<input type="radio" id="email" name="respond" value="email" class="box-shadow-section">
+							 <input type="radio" id="email" name="respond" value="email" class="box-shadow-section">
 							<label for="male">Email</label>
 							<input type="radio" id="phone" name="respond" value="phone" class="box-shadow-section">
 							<label for="phone">Phone</label>

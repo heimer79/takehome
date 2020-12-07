@@ -1,3 +1,7 @@
+<?php
+  require 'inc/vars_settings.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,9 +55,9 @@
 			</section>
 			
 			<section id="hero-description">
-				<h1>HR software</h1>
-				<h2>that really matters</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper, leo dapibus dictum tempor, urna arcu blandit risus, faucibus ornare sapien nulla sit amet est. Proin maximus rhoncus pretium. Sed a blandit est. Proin volutpat tempus dolor eget hendrerit. Vestibulum blandit neque a luctus ultrices. Aliquam id rhoncus libero, eget lobortis quam. </p>
+				<h1><?php print $main_title_hero_0; ?></h1>
+				<h2><?php print $second_title_hero_1; ?></h2>
+				<p><?php print $description_hero_2; ?> </p>
 
 				<button class="btn btn-call-to-action">Get started</button>
 				
