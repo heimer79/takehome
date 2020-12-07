@@ -17,6 +17,10 @@
 
 
 @media (max-width: 1024px) {
+
+.center-box {
+    margin: 0 2rem 0 2rem;
+}
  #desktop-menu {
   display: none;
  }
@@ -36,5 +40,11 @@
 
   flex-flow: row-reverse nowrap;
 
+ }
+
+ #see-where-you-stand iframe {
+    width: 100vw;
+    height: 50vh;
+    max-height: 100%;
  }
 }

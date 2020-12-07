@@ -9,12 +9,12 @@
 
 <body>
 
-<header class="site-header">
+<header class="site-header flex-flow-column">
 
 
 	<div class="box box-hero">
 		
-			<section id="logo-nav">	
+			<section id="logo-nav" class="flex-flow-row">	
 				<div id="logo">
 
 					<figure>			
