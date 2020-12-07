@@ -374,6 +374,7 @@ object {
 #based-data h3 {
     width: 100%;
     line-height: 2.5em;
+    text-align: left;
 }
 
 .card {
@@ -403,7 +404,7 @@ object {
     width: 50%;
 }
 
-#based-data div:nth-child(-n+2) {
+#based-data div:nth-child(-n+3) {
     color: var(--purple1);
 }
 
