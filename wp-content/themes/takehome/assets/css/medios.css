@@ -21,26 +21,59 @@
 .center-box {
     margin: 0 2rem 0 2rem;
 }
- #desktop-menu {
+
+ .site-header {
+    background-position: center;
+    height: 100%;
+    min-height: 70vh;
+    padding-bottom: 5rem;
+}
+
+ .site-header #logo-nav {
+    padding: 2rem 0 2rem 0;
+    justify-content: space-around;
+    background: var(--white);
+}
+
+#get-ahead-section {
+    flex-direction: column;
+}
+
+#get-ahead {
+    width: 90vw;
+    height: 80vh;
+    top: -2rem;
+    left: -2rem;
+    align-self: center;
+}
+
+#hero-description {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+}
+
+#hero-description h1 {
+    margin-top: 5rem;
+    font-size: 6rem;
+}
+
+#hero-description p {
+    width:50vw;
+}
+
+
+ #desktop-menu, .desktop {
   display: none;
  }
 
- #mobile-menu {
+ #mobile-menu, .mobile {
   display: block;
  }
 
- .site-header {
 
-  background-position: center;
-  height: auto;
-
- }
-
- .site-header #logo-nav {
-
-  flex-flow: row-reverse nowrap;
-
- }
 
  #see-where-you-stand iframe {
     width: 100vw;

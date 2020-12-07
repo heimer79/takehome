@@ -21,9 +21,14 @@
 			<section id="logo-nav" class="flex-flow-row">	
 				<div id="logo">
 
-					<figure>			
+					<figure class="desktop">			
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="logo">
 					</figure>
+
+					<figure class="mobile">			
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-bk.svg" alt="logo">
+					</figure>
+
 				</div>
 				<div id="menu" >
 					<nav id="desktop-menu">

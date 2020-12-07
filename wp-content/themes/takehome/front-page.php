@@ -113,10 +113,10 @@
 				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBs-ONSe2mvpxykqBE5yTyVYIgvffAfPlg
 					&q=<?php print $defines_the_place_to_highlight_on_the_map_23; ?>&center=<?php print $latitude_map_20; ?>,<?php print $longitude_map_21; ?>&zoom=<?php print $zoom_map_22; ?>" allowfullscreen>
 		</iframe>
-		<div id="address" class="box-shadow-section">
+		<div id="address" class="box-shadow-section flex-flow-row">
 			<div id="logo">
 				 <figure>
-					 <img src="" alt="">
+					 <img src="<?php echo get_bloginfo( 'template_url' ) . '/assets/img/Group-12.svg'; ?>" alt="">
 				</figure>
 			</div>
 			<div id="text">

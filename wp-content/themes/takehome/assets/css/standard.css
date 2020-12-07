@@ -40,7 +40,11 @@
  margin-top: 1rem;
 }
 
-#mobile-menu {
+.desktop{
+   display: block;
+}
+
+#mobile-menu, .mobile {
  display: none;
 }
 
@@ -190,7 +194,7 @@ img[class*="wp-image-"] {
 .entry-content img,
 img.size-full {
  max-width: 100%;
- width: auto;
+ width: 200px;
  /* Prevent stretching of full-size images with height and width attributes in IE8 */
 }
 
@@ -531,6 +535,29 @@ object {
     width: 344px;
     height: 88px;
     top: -65rem;
+    line-height: 1.2em;
+}
+
+#address #logo {
+    width: 25%;
+    position: relative;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 30%;
+}
+
+#address #text {
+    width: 75%;
+    position: relative;
+    float: left;
+}
+
+#address #text h3{
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    font-weight: bold;
 }
 
 #contact-form {
