@@ -6,7 +6,7 @@
 
 
 class ThemeSettingsIdeaware {
-	private $theme_settings_ideaware_options;
+	public $theme_settings_ideaware_options;
 
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'theme_settings_ideaware_add_plugin_page' ) );

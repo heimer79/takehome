@@ -1,5 +1,5 @@
 <?php
-  require 'inc/vars_settings.php'
+   include( locate_template( 'inc/vars_settings.php', false, false ) );
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +13,10 @@
 
 <body>
 
+<?php if(is_front_page()){
+?>
+
+
 <header class="site-header flex-flow-column">
 
 
@@ -21,12 +25,16 @@
 			<section id="logo-nav" class="flex-flow-row">	
 				<div id="logo">
 
-					<figure class="desktop">			
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="logo">
+					<figure class="desktop">
+						<a href="<?php echo site_url(); ?>">		
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="logo">
+						</a>	
 					</figure>
 
-					<figure class="mobile">			
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-bk.svg" alt="logo">
+					<figure class="mobile">	
+						<a href="<?php echo site_url(); ?>">		
+						  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-bk.svg" alt="logo">
+						</a>	
 					</figure>
 
 				</div>
@@ -71,4 +79,66 @@
 	</div>
 </header>
 
+					<?php } else{ ?>
 
+<header class="site-header flex-flow-column">
+
+
+	<div class="box box-hero">
+		
+			<section id="logo-nav" class="flex-flow-row">	
+				<div id="logo">
+
+					<figure class="desktop">
+						<a href="<?php echo site_url(); ?>">				
+						  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="logo">
+					  </a>
+					</figure>
+
+					<figure class="mobile">
+						<a href="<?php echo site_url(); ?>">				
+						  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-bk.svg" alt="logo">
+						</a>
+					</figure>
+
+				</div>
+				<div id="menu" >
+					<nav id="desktop-menu">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location'  => 'top_menu',
+								'menu_class'      => 'main-navigation',
+								'container_class' => 'container-menu',
+
+							)
+						);
+						?>
+					</nav>
+					
+					<nav id="mobile-menu">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location'  => 'mobile_menu',
+								'menu_class'      => 'menu-toggle',
+								'container_class' => 'main-small-navigation',
+
+							)
+						);
+						?>
+					</nav>
+				</div>
+			</section>
+
+
+
+			<h1><?php print get_the_title(); ?></h1>
+			
+			
+		
+
+	</div>
+</header>
+
+					<?php }?>

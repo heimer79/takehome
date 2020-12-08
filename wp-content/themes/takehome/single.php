@@ -1,21 +1,25 @@
-<?php get_header(); ?>
+<?php get_header(); 
+   include( locate_template( 'inc/vars_settings.php', false, false ) );
+?>
 
-	<main class="container my-3">
+
+
+	<main>
 	 <?php
 		if ( have_posts() ) {
 			while ( have_posts() ) {
 				the_post();
 				?>
 
-			<h1 class="my-3"><?php the_title(); ?></h1>
-			<div class="row">
-				<div class="col-4">
+			
+			<div>
+				<div >
 
 					   <?php the_post_thumbnail( 'large' ); ?>
 				
 				
 				</div>
-				<div class="col-8">
+				<div >
 					   <?php the_content(); ?>
 				
 				</div>
@@ -26,6 +30,9 @@
 			}
 		}
 		?>
+
+
+<?php  include( locate_template( 'template-parts/contact-us.php', false, false ) ); ?>
 
 	</main>
 

@@ -29,6 +29,7 @@ if ( ! class_exists( 'Takehome' ) ) :
 			add_action( 'after_setup_theme', array( $this, 'init_template' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ) );
 			add_action( 'init', array( $this, 'research_type' ) );
+			add_action('widgets_init', array( $this,'sidebar'));
 
 		}
 
@@ -92,10 +93,65 @@ if ( ! class_exists( 'Takehome' ) ) :
 
 			);
 			register_post_type( 'research', $args );
+			
 		}
+
+		function sidebar(){
+    register_sidebar( 
+					array(
+							'name' => 'pie de pagina',
+							'id' => 'footer',
+							'description' => 'zona de wigets para pie de pagina',
+							'before_title' => '<p>',
+							'after_title' => '</p>',
+							'before_widget' => '<div id="%1$s" class="%2$s">',
+							'after_widget' => '</div>',
+					)
+
+				);
+		register_sidebar(		
+					array(
+							'name' => 'Copyright first column',
+							'id' => 'copyright-first-column',
+							'description' => 'Zona para copyright un menu de tres elementos max.',
+							'before_title' => '<p>',
+							'after_title' => '</p>',
+							'before_widget' => '<div id="%1$s" class="%2$s">',
+							'after_widget' => '</div>',
+					)
+				);
+		
+		register_sidebar(        
+					array(
+							'name' => 'Copyright second column',
+							'id' => 'copyright-second-column',
+							'description' => 'Zona para copyright el logo.',
+							'before_title' => '<p>',
+							'after_title' => '</p>',
+							'before_widget' => '<div id="%1$s" class="%2$s">',
+							'after_widget' => '</div>',
+					)		
+					);
+			
+		register_sidebar(
+					array(
+							'name' => 'Copyright third column',
+							'id' => 'copyright-third-column',
+							'description' => 'Zona para las redes sociales',
+							'before_title' => '<p>',
+							'after_title' => '</p>',
+							'before_widget' => '<div id="%1$s" class="%2$s">',
+							'after_widget' => '</div>',
+					)
+					);
+		
+		
+		}
+
 
 	}
 
+	
 
 
 	endif;

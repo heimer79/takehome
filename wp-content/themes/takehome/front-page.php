@@ -1,5 +1,5 @@
 <?php get_header();
-  require 'inc/vars_settings.php'
+    include( locate_template( 'inc/vars_settings.php', false, false ) );
 ?>
 
 <main>
@@ -105,62 +105,12 @@
 
 	</section>
 
-	<section id="contact-us" class="center-box flex-flow-column" >
-		<iframe
-				width="600"
-				height="450"
-				frameborder="0" style="border:0"
-				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBs-ONSe2mvpxykqBE5yTyVYIgvffAfPlg
-					&q=<?php print $defines_the_place_to_highlight_on_the_map_23; ?>&center=<?php print $latitude_map_20; ?>,<?php print $longitude_map_21; ?>&zoom=<?php print $zoom_map_22; ?>" allowfullscreen>
-		</iframe>
-		<div id="address" class="box-shadow-section flex-flow-row">
-			<div id="logo">
-				 <figure>
-					 <img src="<?php echo get_bloginfo( 'template_url' ) . '/assets/img/Group-12.svg'; ?>" alt="">
-				</figure>
-			</div>
-			<div id="text">
-				<h3>FIELDS COURT STATION ROAD</h3>
-				<p>Epworth DN9 1JZ - United Kingdom Company Reg: 8202467</p>
 
-			</div>
-		</div>
-		<div id="contact-form" class="box-shadow-section">
-
-				<h2>Contact Us</h2>
-				<p>Send us a message</p>
-				<form action="" method="post">
-
-					  <input type="text" name="name" placeholder="Name">
-						<input type="email" name="email" placeholder="Email">
-						 <input type="tel" name="phone" placeholder="Phone">
-
-						 <label for="">How would you like us to respond?</label>
-
-						 <div>
-
-							 <input type="radio" id="email" name="respond" value="email" class="box-shadow-section">
-							<label for="male">Email</label>
-							<input type="radio" id="phone" name="respond" value="phone" class="box-shadow-section">
-							<label for="phone">Phone</label>
-						
-
-							<textarea name="message" >
-									
-							</textarea>
-						</div>
-
-							<input type="submit" value="Submit">
+	<?php  include( locate_template( 'template-parts/contact-us.php', false, false ) ); ?>
 
 
-				</form>
-				
 
-		</div>
-
-	</section>
-
-	
+	 
 
 </main>
 
