@@ -254,6 +254,14 @@ class ThemeSettingsIdeaware {
 			'theme-settings-ideaware-admin', // page
 			'theme_settings_ideaware_setting_section' // section
 		);
+
+		add_settings_field(
+			'email_recipient_contact_form_25', // id
+			'Email recipient on Contact form', // title
+			array( $this, 'email_recipient_contact_form_25_callback' ), // callback
+			'theme-settings-ideaware-admin', // page
+			'theme_settings_ideaware_setting_section' // section
+		);
 	}
 
 	public function theme_settings_ideaware_sanitize($input) {
@@ -356,6 +364,10 @@ class ThemeSettingsIdeaware {
 
 		if ( isset( $input['id_you_tube_video_24'] ) ) {
 			$sanitary_values['id_you_tube_video_24'] = sanitize_text_field( $input['id_you_tube_video_24'] );
+		}
+
+		if ( isset( $input['email_recipient_contact_form_25'] ) ) {
+			$sanitary_values['email_recipient_contact_form_25'] = sanitize_text_field( $input['email_recipient_contact_form_25'] );
 		}
 
 		return $sanitary_values;
@@ -537,6 +549,13 @@ class ThemeSettingsIdeaware {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[id_you_tube_video_24]" id="id_you_tube_video_24" value="%s">',
 			isset( $this->theme_settings_ideaware_options['id_you_tube_video_24'] ) ? esc_attr( $this->theme_settings_ideaware_options['id_you_tube_video_24']) : ''
+		);
+	}
+
+	public function email_recipient_contact_form_25_callback() {
+		printf(
+			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[email_recipient_contact_form_25]" id="email_recipient_contact_form_25" value="%s">',
+			isset( $this->theme_settings_ideaware_options['email_recipient_contact_form_25'] ) ? esc_attr( $this->theme_settings_ideaware_options['email_recipient_contact_form_25']) : ''
 		);
 	}
 

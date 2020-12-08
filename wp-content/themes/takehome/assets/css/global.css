@@ -32,6 +32,7 @@ body {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  word-wrap: break-word;
 }
 
 body,
@@ -309,11 +310,12 @@ main {
   flex-flow: column wrap;
   width: -webkit-fill-available;
   position: relative;
-  margin-bottom: -30rem;
+  margin-bottom: -35rem;
 }
 
 footer {
   display: flex;
+  margin-top: 5rem;
   flex-flow: column;
   align-self: center;
   position: relative;

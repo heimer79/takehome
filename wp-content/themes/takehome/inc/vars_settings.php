@@ -26,4 +26,5 @@
   $zoom_map_22                                  = $theme_settings_ideaware_options['zoom_map_22']; // Zoom map
   $defines_the_place_to_highlight_on_the_map_23 = $theme_settings_ideaware_options['defines_the_place_to_highlight_on_the_map_23']; // Defines the place to highlight on the map
   $id_you_tube_video_24                         = $theme_settings_ideaware_options['id_you_tube_video_24']; // id  You Tube Video
+  $email_recipient_contact_form_25 = $theme_settings_ideaware_options['email_recipient_contact_form_25']; // email Recipient Contact
 

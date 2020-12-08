@@ -570,6 +570,14 @@ input[type="radio"] {
   top: -40rem;
 }
 
+.respond-form {
+  position: absolute;
+  top: 40vh;
+  color: var(--white);
+  font-size: 4rem;
+  text-align: center;
+}
+
 footer > div {
   display: flex;
   flex-flow: row wrap;
