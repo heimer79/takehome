@@ -46,7 +46,7 @@ if ( ! class_exists( 'Takehome' ) ) :
 			);
 		}
 
-
+	
 
 		public function assets() {
 			// Adding reset browser styles
@@ -63,11 +63,17 @@ if ( ! class_exists( 'Takehome' ) ) :
 
 			wp_enqueue_style( 'estilos', get_stylesheet_uri(), array( 'reset', 'fuente', 'icons', 'global', 'standard', 'medios' ), '1.0.0', 'all' );
 
-			wp_register_script( 'jquery3.2.1', 'https://code.jquery.com/jquery-3.2.1.min.js' );
+			
 
-			wp_add_inline_script( 'jquery3.2.1', 'var jQuery3_2_1 = $.noConflict(true);' );
+			wp_register_script( 'amp', 'https://cdn.ampproject.org/v0.js' );
 
-			wp_enqueue_script( 'custom', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery3.2.1' ), '1.0.0', true );
+			wp_register_script( 'amp-social-share', 'https://cdn.ampproject.org/v0/amp-social-share-0.1.js' );
+
+			wp_register_script( 'jquery3.3.1', 'https://code.jquery.com/jquery-3.3.1.min.js' );
+
+		
+
+			wp_enqueue_script( 'custom', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery3.3.1', 'amp', 'amp-social-share'  ), '1.0.0', true );
 
 		}
 

@@ -53,6 +53,9 @@
 					</nav>
 					
 					<nav id="mobile-menu">
+						<span class="icon icon-menu open-button"></span></span>
+
+						
 						<?php
 						wp_nav_menu(
 							array(
@@ -117,6 +120,7 @@
 					</nav>
 					
 					<nav id="mobile-menu">
+						<span class="icon icon-menu open-button"></span></span>
 						<?php
 						wp_nav_menu(
 							array(
@@ -133,7 +137,7 @@
 
 
 
-			<h1><?php print get_the_title(); ?></h1>
+			<h1 class="post-title"><?php print get_the_title(); ?></h1>
 			
 			
 		

@@ -37,6 +37,12 @@
 <?php
 wp_footer();
 ?>
+
+    <div class="go-up" role="button">
+        <div class="circle-icon">
+            <span class="icon icon-circle-up"></span>
+        </div>
+    </div>
 </body>
 
 </html>
