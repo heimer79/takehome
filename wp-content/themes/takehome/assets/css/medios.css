@@ -31,7 +31,7 @@
   }
 
   .post-title {
-    width: 90vh;
+    width: 90%;
     align-self: center;
     text-align: center;
     margin-top: 20rem;
@@ -114,11 +114,16 @@
   #research-post article {
     width: 90vw;
     margin: 2vh 2vw 2vh -3vw;
-    flex-flow: column wrap;
+    padding: 2rem;
   }
 
   #research-post article figure {
-    width: 80%;
+    width: 95%;
+  }
+
+  #research-post article div {
+    width: 99%;
+    text-align: center;
   }
 
   #research-post article div h2 {
