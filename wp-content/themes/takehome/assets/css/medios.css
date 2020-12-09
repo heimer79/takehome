@@ -113,6 +113,7 @@
 
   #research-post article {
     width: 90vw;
+    height: auto;
     margin: 2vh 2vw 2vh -3vw;
     padding: 2rem;
   }
