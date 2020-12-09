@@ -9,10 +9,10 @@
  * @package take_home
  * @since takehome Theme 1.0
  */
-//Clases
+// Clases
 require 'inc/takehome-class.php';
 require 'inc/ThemeSettingsIdeaware.php';
 require 'inc/social_buttons.php';
 
-//Global theme functions
+// Global theme functions
 require 'inc/takehome-functions.php';

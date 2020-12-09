@@ -30,6 +30,29 @@
     background: var(--white);
   }
 
+  .post-title {
+    width: 90vh;
+    align-self: center;
+    text-align: center;
+    margin-top: 20rem;
+  }
+
+  .post-main-content {
+    flex-flow: column nowrap;
+  }
+
+  .post-content {
+    width: 90vw;
+    z-index: auto;
+    top: 0;
+    align-self: center;
+  }
+
+  .meta-box {
+    text-align: center;
+    align-self: center;
+  }
+
   #get-ahead-section {
     flex-direction: column;
     margin: 0 0 6rem 0;

@@ -17,34 +17,37 @@ class social_buttons extends WP_Widget {
 
 	public function widget( $args, $instance ) {
 
-		echo "<ul>
-						 <li><a href=".$instance['sb_one']." ><span class=\"icon icon-facebook2\"></a></li>
-						 <li><a href=".$instance['sb_two']." ><span class=\"icon icon-twitter\"></a></li>
-						 <li><a href=".$instance['sb_three']." ><span class=\"icon icon-youtube\"></a></li>
-						 <li><a href=".$instance['sb_four']." ><span class=\"icon icon-pinterest\"></a></li>
-						 <li><a href=".$instance['sb_five']." ><span class=\"icon icon-linkedin\"></a></li>
+		echo '<ul>
+						 <li><a href=' . $instance['sb_one'] . ' ><span class="icon icon-facebook2"></a></li>
+						 <li><a href=' . $instance['sb_two'] . ' ><span class="icon icon-twitter"></a></li>
+						 <li><a href=' . $instance['sb_three'] . ' ><span class="icon icon-youtube"></a></li>
+						 <li><a href=' . $instance['sb_four'] . ' ><span class="icon icon-pinterest"></a></li>
+						 <li><a href=' . $instance['sb_five'] . ' ><span class="icon icon-linkedin"></a></li>
 		     </ul>
-		";
+		';
 
 	}
 
 	public function form( $instance ) {
 
 		// Set default values
-		$instance = wp_parse_args( (array) $instance, array( 
-			'sb_one' => '#',
-			'sb_two' => '#',
-			'sb_three' => '#',
-			'sb_four' => '#',
-			'sb_five' => '#',
-		) );
+		$instance = wp_parse_args(
+			(array) $instance,
+			array(
+				'sb_one'   => '#',
+				'sb_two'   => '#',
+				'sb_three' => '#',
+				'sb_four'  => '#',
+				'sb_five'  => '#',
+			)
+		);
 
 		// Retrieve an existing value from the database
-		$sb_one = !empty( $instance['sb_one'] ) ? $instance['sb_one'] : '';
-		$sb_two = !empty( $instance['sb_two'] ) ? $instance['sb_two'] : '';
-		$sb_three = !empty( $instance['sb_three'] ) ? $instance['sb_three'] : '';
-		$sb_four = !empty( $instance['sb_four'] ) ? $instance['sb_four'] : '';
-		$sb_five = !empty( $instance['sb_five'] ) ? $instance['sb_five'] : '';
+		$sb_one   = ! empty( $instance['sb_one'] ) ? $instance['sb_one'] : '';
+		$sb_two   = ! empty( $instance['sb_two'] ) ? $instance['sb_two'] : '';
+		$sb_three = ! empty( $instance['sb_three'] ) ? $instance['sb_three'] : '';
+		$sb_four  = ! empty( $instance['sb_four'] ) ? $instance['sb_four'] : '';
+		$sb_five  = ! empty( $instance['sb_five'] ) ? $instance['sb_five'] : '';
 
 		// Form fields
 		echo '<p>';
@@ -78,11 +81,11 @@ class social_buttons extends WP_Widget {
 
 		$instance = $old_instance;
 
-		$instance['sb_one'] = !empty( $new_instance['sb_one'] ) ? strip_tags( $new_instance['sb_one'] ) : '';
-		$instance['sb_two'] = !empty( $new_instance['sb_two'] ) ? strip_tags( $new_instance['sb_two'] ) : '';
-		$instance['sb_three'] = !empty( $new_instance['sb_three'] ) ? strip_tags( $new_instance['sb_three'] ) : '';
-		$instance['sb_four'] = !empty( $new_instance['sb_four'] ) ? strip_tags( $new_instance['sb_four'] ) : '';
-		$instance['sb_five'] = !empty( $new_instance['sb_five'] ) ? strip_tags( $new_instance['sb_five'] ) : '';
+		$instance['sb_one']   = ! empty( $new_instance['sb_one'] ) ? strip_tags( $new_instance['sb_one'] ) : '';
+		$instance['sb_two']   = ! empty( $new_instance['sb_two'] ) ? strip_tags( $new_instance['sb_two'] ) : '';
+		$instance['sb_three'] = ! empty( $new_instance['sb_three'] ) ? strip_tags( $new_instance['sb_three'] ) : '';
+		$instance['sb_four']  = ! empty( $new_instance['sb_four'] ) ? strip_tags( $new_instance['sb_four'] ) : '';
+		$instance['sb_five']  = ! empty( $new_instance['sb_five'] ) ? strip_tags( $new_instance['sb_five'] ) : '';
 
 		return $instance;
 

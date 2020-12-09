@@ -1,5 +1,5 @@
 <?php
-   include( locate_template( 'inc/vars_settings.php', false, false ) );
+   require locate_template( 'inc/vars_settings.php', false, false );
 ?>
 
 <!DOCTYPE html>
@@ -13,8 +13,9 @@
 
 <body>
 
-<?php if(is_front_page()){
-?>
+<?php
+if ( is_front_page() ) {
+	?>
 
 
 <header class="site-header flex-flow-column">
@@ -82,7 +83,7 @@
 	</div>
 </header>
 
-					<?php } else{ ?>
+					<?php } else { ?>
 
 <header class="site-header flex-flow-column">
 
@@ -145,4 +146,4 @@
 	</div>
 </header>
 
-					<?php }?>
+					<?php } ?>

@@ -1,7 +1,3 @@
-<?php 
-	
-    
-?>
 
 
 	<section id="contact-us" class="center-box flex-flow-column" >
@@ -17,7 +13,7 @@
 
 				<h2>Contact Us</h2>
 				<p>Send us a message</p>
-				<form action="<?php echo get_template_directory_uri().'/sent-contact.php';  ?>" method="post">
+				<form action="<?php echo get_template_directory_uri() . '/sent-contact.php'; ?>" method="post">
 
 					  <input type="text" name="name" value="" placeholder="Name">
 						<input type="email" name="email" value="" placeholder="Email">

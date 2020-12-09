@@ -1,5 +1,5 @@
-<?php get_header(); 
-   include( locate_template( 'inc/vars_settings.php', false, false ) );
+<?php get_header();
+   require locate_template( 'inc/vars_settings.php', false, false );
 ?>
 
 
@@ -119,7 +119,7 @@
 		?>
 
 
-<?php  include( locate_template( 'template-parts/contact-us.php', false, false ) ); ?>
+<?php require locate_template( 'template-parts/contact-us.php', false, false ); ?>
 
 	</main>
 

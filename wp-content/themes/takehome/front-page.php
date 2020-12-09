@@ -1,5 +1,5 @@
 <?php get_header();
-    include( locate_template( 'inc/vars_settings.php', false, false ) );
+	require locate_template( 'inc/vars_settings.php', false, false );
 ?>
 
 <main>
@@ -70,9 +70,9 @@
 
 									<?php
 									if ( has_post_thumbnail() ) {
-													the_post_thumbnail( 'thumbnail' );
+												echo '<a href="' . the_permalink() . '">' . the_post_thumbnail( 'thumbnail' ) . '</a>';
 									} else {
-											echo '<img src="' . get_bloginfo( 'template_url' ) . '/assets/img/Group-1.svg" />';
+											echo '<a href="' . get_the_permalink() . '"><img src="' . get_template_directory_uri() . '/assets/img/Group-1.svg" /></a>';
 									}
 
 									?>
@@ -106,7 +106,7 @@
 	</section>
 
 
-	<?php  include( locate_template( 'template-parts/contact-us.php', false, false ) ); ?>
+	<?php require locate_template( 'template-parts/contact-us.php', false, false ); ?>
 
 
 

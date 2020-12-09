@@ -190,7 +190,8 @@
 }
 
 .center-text {
-  width: 50vw;
+  width: 100%;
+  max-width: 800px;
   text-align: center;
 }
 
@@ -339,6 +340,10 @@ object {
   display: none;
 }
 
+/* ============================================== ========================== 
+   Header and hero  section
+   ===================== ================================================ === */
+
 .site-header {
   background-image: url(../img/overlay-black.png), url(../img/room-big.png);
   -webkit-box-sizing: border-box;
@@ -386,6 +391,10 @@ object {
   width: 16rem;
 }
 
+/* ============================================== ========================== 
+   Get ahead of the curve  section
+   ===================== ================================================ === */
+
 #get-ahead-section {
   display: flex;
   position: relative;
@@ -411,6 +420,10 @@ object {
   align-self: center;
   margin-right: auto;
 }
+
+/* ============================================== ========================== 
+   Cards Based on data from section
+   ===================== ================================================ === */
 
 #based-data {
   flex-flow: row wrap;
@@ -472,6 +485,10 @@ object {
   text-transform: uppercase;
 }
 
+/* ============================================== ========================== 
+   See where you stand (industries) section
+   ===================== ================================================ === */
+
 #see-where {
   height: 50vh;
 
@@ -509,6 +526,10 @@ object {
   border: 1px solid var(--greyborder1);
 }
 
+/* ============================================== ========================== 
+   Research section
+   ===================== ================================================ === */
+
 #research-post {
   flex-flow: column wrap;
   padding: 8rem 0 8rem 0;
@@ -517,9 +538,12 @@ object {
 
 #research-post article {
   display: flex;
-
-  align-items: center;
   margin: 2rem 0 2rem 0;
+  width: 100%;
+  height: 250px;
+  max-width: 800px;
+  align-self: center;
+  align-items: center;
 }
 
 #research-post * {
@@ -529,6 +553,13 @@ object {
 
 #research-post article figure {
   width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+#research-post figure img {
+  width: 100%;
+  height: auto;
 }
 
 #research-post article div {
@@ -538,8 +569,12 @@ object {
 }
 
 #research-post article div h2 {
-  width: 60%;
+  width: 70%;
 }
+
+/* ============================================== ========================== 
+   Contact us section
+   ===================== ================================================ === */
 
 #see-where-you-stand {
   align-items: center;
@@ -623,6 +658,10 @@ input[type="radio"] {
   text-align: center;
 }
 
+/* ============================================== ========================== 
+   Content type research section =================
+   ===================== ================================================ === */
+
 .post-title {
   width: 30vw;
   height: auto;
@@ -665,6 +704,10 @@ input[type="radio"] {
 #post-share ul li {
   margin: 0 1rem 0 0;
 }
+
+/* ============================================== ========================== 
+   Footer Section
+   ===================== ================================================ === */
 
 footer > div {
   display: flex;
@@ -796,5 +839,4 @@ footer section div:nth-child(3) ul li a:hover {
   height: 2.7rem;
   color: var(--purple2);
   font-size: 6rem;
-  box-shadow: 0 0.3125rem 0.6875rem 0 var(--greyshadow);
 }

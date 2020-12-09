@@ -39,7 +39,8 @@ class ThemeSettingsIdeaware {
 				?>
 			</form>
 		</div>
-	<?php }
+		<?php
+	}
 
 	public function theme_settings_ideaware_page_init() {
 		register_setting(
@@ -264,7 +265,7 @@ class ThemeSettingsIdeaware {
 		);
 	}
 
-	public function theme_settings_ideaware_sanitize($input) {
+	public function theme_settings_ideaware_sanitize( $input ) {
 		$sanitary_values = array();
 		if ( isset( $input['main_title_hero_0'] ) ) {
 			$sanitary_values['main_title_hero_0'] = sanitize_text_field( $input['main_title_hero_0'] );
@@ -374,192 +375,193 @@ class ThemeSettingsIdeaware {
 	}
 
 	public function theme_settings_ideaware_section_info() {
-		
+
 	}
 
 	public function main_title_hero_0_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[main_title_hero_0]" id="main_title_hero_0" value="%s">',
-			isset( $this->theme_settings_ideaware_options['main_title_hero_0'] ) ? esc_attr( $this->theme_settings_ideaware_options['main_title_hero_0']) : ''
+			isset( $this->theme_settings_ideaware_options['main_title_hero_0'] ) ? esc_attr( $this->theme_settings_ideaware_options['main_title_hero_0'] ) : ''
 		);
 	}
 
 	public function second_title_hero_1_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[second_title_hero_1]" id="second_title_hero_1" value="%s">',
-			isset( $this->theme_settings_ideaware_options['second_title_hero_1'] ) ? esc_attr( $this->theme_settings_ideaware_options['second_title_hero_1']) : ''
+			isset( $this->theme_settings_ideaware_options['second_title_hero_1'] ) ? esc_attr( $this->theme_settings_ideaware_options['second_title_hero_1'] ) : ''
 		);
 	}
 
 	public function description_hero_2_callback() {
 		printf(
 			'<textarea class="large-text" rows="5" name="theme_settings_ideaware_option_name[description_hero_2]" id="description_hero_2">%s</textarea>',
-			isset( $this->theme_settings_ideaware_options['description_hero_2'] ) ? esc_attr( $this->theme_settings_ideaware_options['description_hero_2']) : ''
+			isset( $this->theme_settings_ideaware_options['description_hero_2'] ) ? esc_attr( $this->theme_settings_ideaware_options['description_hero_2'] ) : ''
 		);
 	}
 
 	public function title_second_section_3_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[title_second_section_3]" id="title_second_section_3" value="%s">',
-			isset( $this->theme_settings_ideaware_options['title_second_section_3'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_second_section_3']) : ''
+			isset( $this->theme_settings_ideaware_options['title_second_section_3'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_second_section_3'] ) : ''
 		);
 	}
 
 	public function description_second_section_4_callback() {
 		printf(
 			'<textarea class="large-text" rows="5" name="theme_settings_ideaware_option_name[description_second_section_4]" id="description_second_section_4">%s</textarea>',
-			isset( $this->theme_settings_ideaware_options['description_second_section_4'] ) ? esc_attr( $this->theme_settings_ideaware_options['description_second_section_4']) : ''
+			isset( $this->theme_settings_ideaware_options['description_second_section_4'] ) ? esc_attr( $this->theme_settings_ideaware_options['description_second_section_4'] ) : ''
 		);
 	}
 
 	public function title_third_section_5_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[title_third_section_5]" id="title_third_section_5" value="%s">',
-			isset( $this->theme_settings_ideaware_options['title_third_section_5'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_third_section_5']) : ''
+			isset( $this->theme_settings_ideaware_options['title_third_section_5'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_third_section_5'] ) : ''
 		);
 	}
 
 	public function title_first_card_6_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[title_first_card_6]" id="title_first_card_6" value="%s">',
-			isset( $this->theme_settings_ideaware_options['title_first_card_6'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_first_card_6']) : ''
+			isset( $this->theme_settings_ideaware_options['title_first_card_6'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_first_card_6'] ) : ''
 		);
 	}
 
 	public function subtitle_first_card_7_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[subtitle_first_card_7]" id="subtitle_first_card_7" value="%s">',
-			isset( $this->theme_settings_ideaware_options['subtitle_first_card_7'] ) ? esc_attr( $this->theme_settings_ideaware_options['subtitle_first_card_7']) : ''
+			isset( $this->theme_settings_ideaware_options['subtitle_first_card_7'] ) ? esc_attr( $this->theme_settings_ideaware_options['subtitle_first_card_7'] ) : ''
 		);
 	}
 
 	public function title_second_card_8_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[title_second_card_8]" id="title_second_card_8" value="%s">',
-			isset( $this->theme_settings_ideaware_options['title_second_card_8'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_second_card_8']) : ''
+			isset( $this->theme_settings_ideaware_options['title_second_card_8'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_second_card_8'] ) : ''
 		);
 	}
 
 	public function subtitle_second_card_9_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[subtitle_second_card_9]" id="subtitle_second_card_9" value="%s">',
-			isset( $this->theme_settings_ideaware_options['subtitle_second_card_9'] ) ? esc_attr( $this->theme_settings_ideaware_options['subtitle_second_card_9']) : ''
+			isset( $this->theme_settings_ideaware_options['subtitle_second_card_9'] ) ? esc_attr( $this->theme_settings_ideaware_options['subtitle_second_card_9'] ) : ''
 		);
 	}
 
 	public function title_third_card_10_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[title_third_card_10]" id="title_third_card_10" value="%s">',
-			isset( $this->theme_settings_ideaware_options['title_third_card_10'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_third_card_10']) : ''
+			isset( $this->theme_settings_ideaware_options['title_third_card_10'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_third_card_10'] ) : ''
 		);
 	}
 
 	public function subtitle_third_card_11_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[subtitle_third_card_11]" id="subtitle_third_card_11" value="%s">',
-			isset( $this->theme_settings_ideaware_options['subtitle_third_card_11'] ) ? esc_attr( $this->theme_settings_ideaware_options['subtitle_third_card_11']) : ''
+			isset( $this->theme_settings_ideaware_options['subtitle_third_card_11'] ) ? esc_attr( $this->theme_settings_ideaware_options['subtitle_third_card_11'] ) : ''
 		);
 	}
 
 	public function title_fourth_card_12_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[title_fourth_card_12]" id="title_fourth_card_12" value="%s">',
-			isset( $this->theme_settings_ideaware_options['title_fourth_card_12'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_fourth_card_12']) : ''
+			isset( $this->theme_settings_ideaware_options['title_fourth_card_12'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_fourth_card_12'] ) : ''
 		);
 	}
 
 	public function subtitle_fourth_card_13_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[subtitle_fourth_card_13]" id="subtitle_fourth_card_13" value="%s">',
-			isset( $this->theme_settings_ideaware_options['subtitle_fourth_card_13'] ) ? esc_attr( $this->theme_settings_ideaware_options['subtitle_fourth_card_13']) : ''
+			isset( $this->theme_settings_ideaware_options['subtitle_fourth_card_13'] ) ? esc_attr( $this->theme_settings_ideaware_options['subtitle_fourth_card_13'] ) : ''
 		);
 	}
 
 	public function title_fourth_section_14_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[title_fourth_section_14]" id="title_fourth_section_14" value="%s">',
-			isset( $this->theme_settings_ideaware_options['title_fourth_section_14'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_fourth_section_14']) : ''
+			isset( $this->theme_settings_ideaware_options['title_fourth_section_14'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_fourth_section_14'] ) : ''
 		);
 	}
 
 	public function description_fourth_section_15_callback() {
 		printf(
 			'<textarea class="large-text" rows="5" name="theme_settings_ideaware_option_name[description_fourth_section_15]" id="description_fourth_section_15">%s</textarea>',
-			isset( $this->theme_settings_ideaware_options['description_fourth_section_15'] ) ? esc_attr( $this->theme_settings_ideaware_options['description_fourth_section_15']) : ''
+			isset( $this->theme_settings_ideaware_options['description_fourth_section_15'] ) ? esc_attr( $this->theme_settings_ideaware_options['description_fourth_section_15'] ) : ''
 		);
 	}
 
 	public function title_fifth_section_16_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[title_fifth_section_16]" id="title_fifth_section_16" value="%s">',
-			isset( $this->theme_settings_ideaware_options['title_fifth_section_16'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_fifth_section_16']) : ''
+			isset( $this->theme_settings_ideaware_options['title_fifth_section_16'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_fifth_section_16'] ) : ''
 		);
 	}
 
 	public function description_fifth_section_17_callback() {
 		printf(
 			'<textarea class="large-text" rows="5" name="theme_settings_ideaware_option_name[description_fifth_section_17]" id="description_fifth_section_17">%s</textarea>',
-			isset( $this->theme_settings_ideaware_options['description_fifth_section_17'] ) ? esc_attr( $this->theme_settings_ideaware_options['description_fifth_section_17']) : ''
+			isset( $this->theme_settings_ideaware_options['description_fifth_section_17'] ) ? esc_attr( $this->theme_settings_ideaware_options['description_fifth_section_17'] ) : ''
 		);
 	}
 
 	public function title_sixth_section_18_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[title_sixth_section_18]" id="title_sixth_section_18" value="%s">',
-			isset( $this->theme_settings_ideaware_options['title_sixth_section_18'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_sixth_section_18']) : ''
+			isset( $this->theme_settings_ideaware_options['title_sixth_section_18'] ) ? esc_attr( $this->theme_settings_ideaware_options['title_sixth_section_18'] ) : ''
 		);
 	}
 
 	public function description_sixth_section_19_callback() {
 		printf(
 			'<textarea class="large-text" rows="5" name="theme_settings_ideaware_option_name[description_sixth_section_19]" id="description_sixth_section_19">%s</textarea>',
-			isset( $this->theme_settings_ideaware_options['description_sixth_section_19'] ) ? esc_attr( $this->theme_settings_ideaware_options['description_sixth_section_19']) : ''
+			isset( $this->theme_settings_ideaware_options['description_sixth_section_19'] ) ? esc_attr( $this->theme_settings_ideaware_options['description_sixth_section_19'] ) : ''
 		);
 	}
 
 	public function latitude_map_20_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[latitude_map_20]" id="latitude_map_20" value="%s">',
-			isset( $this->theme_settings_ideaware_options['latitude_map_20'] ) ? esc_attr( $this->theme_settings_ideaware_options['latitude_map_20']) : ''
+			isset( $this->theme_settings_ideaware_options['latitude_map_20'] ) ? esc_attr( $this->theme_settings_ideaware_options['latitude_map_20'] ) : ''
 		);
 	}
 
 	public function longitude_map_21_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[longitude_map_21]" id="longitude_map_21" value="%s">',
-			isset( $this->theme_settings_ideaware_options['longitude_map_21'] ) ? esc_attr( $this->theme_settings_ideaware_options['longitude_map_21']) : ''
+			isset( $this->theme_settings_ideaware_options['longitude_map_21'] ) ? esc_attr( $this->theme_settings_ideaware_options['longitude_map_21'] ) : ''
 		);
 	}
 
 	public function zoom_map_22_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[zoom_map_22]" id="zoom_map_22" value="%s">',
-			isset( $this->theme_settings_ideaware_options['zoom_map_22'] ) ? esc_attr( $this->theme_settings_ideaware_options['zoom_map_22']) : ''
+			isset( $this->theme_settings_ideaware_options['zoom_map_22'] ) ? esc_attr( $this->theme_settings_ideaware_options['zoom_map_22'] ) : ''
 		);
 	}
 
 	public function defines_the_place_to_highlight_on_the_map_23_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[defines_the_place_to_highlight_on_the_map_23]" id="defines_the_place_to_highlight_on_the_map_23" value="%s">',
-			isset( $this->theme_settings_ideaware_options['defines_the_place_to_highlight_on_the_map_23'] ) ? esc_attr( $this->theme_settings_ideaware_options['defines_the_place_to_highlight_on_the_map_23']) : ''
+			isset( $this->theme_settings_ideaware_options['defines_the_place_to_highlight_on_the_map_23'] ) ? esc_attr( $this->theme_settings_ideaware_options['defines_the_place_to_highlight_on_the_map_23'] ) : ''
 		);
 	}
 
 	public function id_you_tube_video_24_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[id_you_tube_video_24]" id="id_you_tube_video_24" value="%s">',
-			isset( $this->theme_settings_ideaware_options['id_you_tube_video_24'] ) ? esc_attr( $this->theme_settings_ideaware_options['id_you_tube_video_24']) : ''
+			isset( $this->theme_settings_ideaware_options['id_you_tube_video_24'] ) ? esc_attr( $this->theme_settings_ideaware_options['id_you_tube_video_24'] ) : ''
 		);
 	}
 
 	public function email_recipient_contact_form_25_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="theme_settings_ideaware_option_name[email_recipient_contact_form_25]" id="email_recipient_contact_form_25" value="%s">',
-			isset( $this->theme_settings_ideaware_options['email_recipient_contact_form_25'] ) ? esc_attr( $this->theme_settings_ideaware_options['email_recipient_contact_form_25']) : ''
+			isset( $this->theme_settings_ideaware_options['email_recipient_contact_form_25'] ) ? esc_attr( $this->theme_settings_ideaware_options['email_recipient_contact_form_25'] ) : ''
 		);
 	}
 
 }
-if ( is_admin() )
+if ( is_admin() ) {
 	$theme_settings_ideaware = new ThemeSettingsIdeaware();
+}
 
